@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 userLogin.text.clear()
                 userPassword.text.clear()
             }
-
         }
     }
 }
