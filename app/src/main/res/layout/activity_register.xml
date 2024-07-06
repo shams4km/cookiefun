@@ -7,21 +7,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background"
-    tools:context=".AuthActivity">
+    tools:context="RegisterActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/interbold"
-        android:textColor="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
+        android:fontFamily="@font/interbold"
+        android:text="Регистрация"
+        android:textColor="@color/white"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="Вход" />
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/user_login_auth"
+        android:id="@+id/user_login"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -31,7 +31,17 @@
         android:hint="Введите логин" />
 
     <EditText
-        android:id="@+id/user_password_auth"
+        android:id="@+id/user_mail"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:hint="Введите почту" />
+
+    <EditText
+        android:id="@+id/user_password"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -42,15 +52,15 @@
 
 
     <Button
-        android:id="@+id/button_auth"
+        android:id="@+id/button_reg"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         android:layout_gravity="center"
+        android:textStyle="bold"
         android:backgroundTint="@color/pinkLight"
         android:enabled="true"
-        android:text="Войти"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:text="Подтвердить" />
 
 
 </LinearLayout>
