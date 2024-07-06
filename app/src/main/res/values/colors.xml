@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple">@color/material_dynamic_tertiary70</color>
+    <color name="pinkLight">#FA8D8D</color>
+    <color name="pinkDark">#923737</color>
+
 </resources>

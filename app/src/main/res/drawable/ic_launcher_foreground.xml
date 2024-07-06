@@ -18,6 +18,9 @@
                 <item
                     android:color="#00000000"
                     android:offset="1.0" />
+                <item
+                    android:name="android:ambientShadowAlpha">0.01</item>
+                <item android:name="android:spotShadowAlpha">0.08</item>
             </gradient>
         </aapt:attr>
     </path>
