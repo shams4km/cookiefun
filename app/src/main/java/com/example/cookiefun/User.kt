@@ -1,4 +1,4 @@
 package com.example.cookiefun
 
-class User {
+class User (val login: String, val password: String){
 }
