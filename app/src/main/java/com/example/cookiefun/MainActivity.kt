@@ -28,14 +28,14 @@ class MainActivity : AppCompatActivity() {
             val login = userLogin.text.toString().trim()
             val password = userPassword.text.toString().trim()
 
-            if (login == " " || password == " ") {
+            if (login == "" || password == "") {
                 Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show()
             } else {
                 val user = User(login, password)
 
                 val db = DbHelper(this, null)
                 db.addUser(user)
-                Toast.makeText(this, "Пользователь $login добавлен", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Пользователь $login добавлен", Toast.LENGTH_LONG).show()
 
                 userLogin.text.clear()
                 userPassword.text.clear()
