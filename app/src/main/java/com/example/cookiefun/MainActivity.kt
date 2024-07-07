@@ -11,6 +11,17 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Проверка аутентификации
+        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val isAuthenticated = sharedPreferences.getBoolean("is_authenticated", false)
+        if (isAuthenticated) {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

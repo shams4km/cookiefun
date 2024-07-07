@@ -6,8 +6,5 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-
-
-class CategoriesFragment : Fragment(R.layout.fragment_categories) {
-
+class ProfileFragment : Fragment(R.layout.fragment_profile) {
 }

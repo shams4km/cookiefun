@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:background="@drawable/image_back"
     tools:context=".AuthActivity">
 
     <TextView
@@ -40,7 +40,6 @@
         android:layout_gravity="center"
         android:hint="Введите пароль" />
 
-
     <Button
         android:id="@+id/button_auth"
         android:layout_width="220dp"
@@ -51,6 +50,4 @@
         android:text="Войти"
         android:textSize="16sp"
         android:textStyle="bold" />
-
-
 </LinearLayout>
