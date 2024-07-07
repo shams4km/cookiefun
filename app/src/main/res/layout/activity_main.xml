@@ -40,7 +40,7 @@
         tools:layout_editor_absoluteX="0dp"
         android:textColor="@color/white"
         android:textColorLink="#FFFFFF"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:iconTint="@color/white"
         app:cornerRadius="15dp"/>
@@ -58,7 +58,7 @@
         android:elevation="10dp"
         android:textColor="@color/white"
         android:textColorLink="#FFFFFF"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:iconTint="@color/white"
         app:cornerRadius="15dp"
