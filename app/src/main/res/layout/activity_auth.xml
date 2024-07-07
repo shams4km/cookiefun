@@ -5,52 +5,57 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context=".AuthActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/interbold"
-        android:textColor="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
+        android:fontFamily="@font/interbold"
+        android:text="Вход"
+        android:textColor="@color/white"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="Вход" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/user_login_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="text"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:hint="Введите логин" />
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Введите логин"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/user_password_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="text"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:hint="Введите пароль" />
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Введите пароль"
+        android:inputType="text" />
 
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_auth"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/pinkLight"
+        android:elevation="10dp"
         android:enabled="true"
         android:text="Войти"
+        android:textColor="@color/white"
+        android:textColorLink="#FFFFFF"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:iconTint="@color/white"
+        app:cornerRadius="15dp"/>
 
 
 </LinearLayout>
