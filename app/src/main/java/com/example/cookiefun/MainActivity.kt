@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity() {
         val button_vhod: Button = findViewById(R.id.button_vxod)
         val button_registr: Button = findViewById(R.id.button_reg)
 
-        button_registr.setOnClickListener{
+        button_registr.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        button_vhod.setOnClickListener{
+        button_vhod.setOnClickListener {
             val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
         }

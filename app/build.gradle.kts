@@ -7,6 +7,10 @@ android {
     namespace = "com.example.cookiefun"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.cookiefun"
         minSdk = 24
@@ -50,8 +54,15 @@ android {
 }
 
 dependencies {
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.5.0")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.5.0")
+
+    // Для Coil
+    implementation("io.coil-kt:coil:2.6.0")
+
+    // Для навигации
+    val nav_version = "2.7.7"
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
