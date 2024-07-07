@@ -40,8 +40,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -54,6 +56,7 @@ android {
 }
 
 dependencies {
+    implementation (libs.xmaterial)
 
     // Для Coil
     implementation("io.coil-kt:coil:2.6.0")
