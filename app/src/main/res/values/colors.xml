@@ -6,4 +6,8 @@
     <color name="pinkLight">#FA8D8D</color>
     <color name="pinkDark">#923737</color>
 
+    <color name="bottom_nav_background">#C57A7A</color>
+    <color name="bottom_nav_item_color">#FFFFFF</color>
+    <color name="bottom_nav_item_color_active">#FFFFFF</color>
+
 </resources>
