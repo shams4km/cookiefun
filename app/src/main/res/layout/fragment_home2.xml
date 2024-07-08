@@ -41,19 +41,42 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="1dp"
         android:elevation="4dp" />
 
     <TextView
-        android:id="@+id/noResultsTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/recipeOfDayHeadTextView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"
-        android:text="Рецепта этого блюда здесь нет"
-        android:textSize="18sp"
-        android:layout_marginLeft="50dp"
-        android:textColor="@android:color/white" />
+        android:layout_below="@id/recipeOfDayImageView"
+        android:padding="16dp"
+        android:text="Предлагаем попробовать:"
+        android:textColor="@color/text_white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/recipeOfDayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeOfDayImageView"
+        android:padding="16dp"
+        android:text="@string/recipe_of_the_day"
+        android:textColor="@color/text_white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/recipeOfDayImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_corners_background"
+        android:onClick="onRecipeOfDayClicked"
+        android:contentDescription="@string/recipe_image" />
+
+
+
+
+
 
 
 </LinearLayout>
