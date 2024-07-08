@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.cookiefun.user.AuthActivity
+import com.example.cookiefun.user.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var dbHelper: DbHelper

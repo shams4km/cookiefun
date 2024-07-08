@@ -7,7 +7,8 @@ import com.example.cookiefun.databinding.ItemRecipeBinding
 
 class RecipeHolder(
     private val binding: ItemRecipeBinding,
-    private val onClicked: (Recipe) -> Unit
+    private val onClicked: (Recipe) -> Unit,
+    private val onFavoriteClicked: (Recipe) -> Unit
 ): ViewHolder(binding.root) {
 
     fun onBind(recipe: Recipe) {
@@ -16,6 +17,9 @@ class RecipeHolder(
             tvRecipeName.text = recipe.name
             root.setOnClickListener {
                 onClicked.invoke(recipe)
+            }
+            ivFavorite.setOnClickListener {
+                onFavoriteClicked.invoke(recipe)
             }
         }
     }
