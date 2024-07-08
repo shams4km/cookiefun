@@ -9,6 +9,7 @@
     android:background="@drawable/image_back"
     tools:context=".AuthActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,6 +57,17 @@
         android:textStyle="bold"
         app:iconTint="@color/white"
         app:cornerRadius="15dp"/>
+
+    <TextView
+        android:id="@+id/link_to_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/inter2"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
 
 
 </LinearLayout>

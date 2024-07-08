@@ -4,15 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavController
 
 
 class RegisterActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,6 +30,12 @@ class RegisterActivity : AppCompatActivity() {
         val userPassword: EditText = findViewById(R.id.user_password)
         val userMail: EditText = findViewById(R.id.user_mail)
         val button: Button = findViewById(R.id.button_reg)
+        val linkToAuth: TextView = findViewById(R.id.link_to_auth)
+
+        linkToAuth.setOnClickListener{
+            val intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
 
         button.setOnClickListener {
             val login = userLogin.text.toString().trim()
@@ -55,5 +64,6 @@ class RegisterActivity : AppCompatActivity() {
                 userMail.text.clear()
             }
         }
+
     }
 }
