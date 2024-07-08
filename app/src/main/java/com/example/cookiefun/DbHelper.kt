@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 class DbHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?) :
     SQLiteOpenHelper(context, "app", factory, 1) {
@@ -41,5 +42,12 @@ class DbHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         val result = cursor.moveToFirst()
         cursor.close()
         return result
+    }
+    // метод для удаления пользователя по логину
+    fun deleteAllUsers() {
+        val db = this.writableDatabase
+        db.delete(TABLE_USERS, null, null)
+        db.close()
+        Log.d("DbHelper", "All users deleted")
     }
 }
