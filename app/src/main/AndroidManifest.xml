@@ -18,10 +18,10 @@
         android:theme="@style/Theme.CookieFun"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".user.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".user.AuthActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

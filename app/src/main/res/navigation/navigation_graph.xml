@@ -64,7 +64,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.cookiefun.ProfileFragment"
+        android:name="com.example.cookiefun.user.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
