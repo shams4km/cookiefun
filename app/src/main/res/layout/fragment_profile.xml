@@ -1,20 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+     android:layout_height="match_parent"
     android:background="@drawable/image_back"
     tools:context=".ProfileFragment">
+
 
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:text="Профиль"
         android:textColor="#FFFFFF"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_title" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="116dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Profile Image"
+        android:src="@drawable/image_profile"
+        app:layout_constraintBottom_toTopOf="@id/text_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_logout"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/pinkLight"
+        android:elevation="10dp"
+        android:enabled="true"
+        android:text="Выйти из профиля"
+        android:textColor="@color/white"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_delete_account"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_delete_account"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="210dp"
+        android:backgroundTint="@color/pinkLight"
+        android:elevation="10dp"
+        android:enabled="true"
+        android:text="Удалить профиль"
+        android:textColor="@color/white"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

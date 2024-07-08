@@ -59,6 +59,7 @@ dependencies {
     implementation (libs.xmaterial)
 
     // Для Coil
+
     implementation("io.coil-kt:coil:2.6.0")
 
     // Для навигации

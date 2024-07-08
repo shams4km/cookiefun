@@ -32,7 +32,7 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             adapter = RecipeAdapter(
                 list = RecipeRepository.recipes,
                 onClicked = {
-                    findNavController().navigate(R.id.action_recipesFragment_to_detailRecipeFragment)
+                    findNavController().navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
                 }
             )
 
