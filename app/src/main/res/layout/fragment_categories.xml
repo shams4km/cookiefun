@@ -4,67 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoriesFragment">
+    tools:context=".CategoriesFragment"
+    android:background="@drawable/image_back">
 
     <Button
         android:id="@+id/button_salad"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/pinkLight"
-        android:elevation="100dp"
+        android:elevation="50dp"
         android:text="Салаты"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152"
-        tools:layout_editor_absoluteX="0dp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_salad"
+        app:layout_constraintBottom_toBottomOf="@+id/button_salad"
+        app:layout_constraintEnd_toEndOf="@+id/button_salad"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@+id/button_salad"
+        app:layout_constraintTop_toTopOf="@+id/button_salad"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_second"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:backgroundTint="@color/pinkLight"
-        android:elevation="100dp"
+        android:elevation="50dp"
+        android:textSize="20sp"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
         android:text="Второе"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_salad" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_second"
+        app:layout_constraintBottom_toBottomOf="@+id/button_second"
+        app:layout_constraintEnd_toEndOf="@+id/button_second"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@+id/button_second"
+        app:layout_constraintTop_toTopOf="@+id/button_second"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_soup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:backgroundTint="@color/pinkLight"
-        android:elevation="100dp"
+        android:elevation="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20sp"
         android:text="Супы"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.439"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_second" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_soup"
+        app:layout_constraintBottom_toBottomOf="@+id/button_soup"
+        app:layout_constraintEnd_toEndOf="@+id/button_soup"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@+id/button_soup"
+        app:layout_constraintTop_toTopOf="@+id/button_soup"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_bakery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:backgroundTint="@color/pinkLight"
-        android:elevation="100dp"
+        android:elevation="50dp"
+        android:textSize="20sp"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
         android:text="Выпечка"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_soup" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_bakery"
+        app:layout_constraintBottom_toBottomOf="@+id/button_bakery"
+        app:layout_constraintEnd_toEndOf="@+id/button_bakery"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@+id/button_bakery"
+        app:layout_constraintTop_toTopOf="@+id/button_bakery"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_porridge"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20sp"
         android:backgroundTint="@color/pinkLight"
-        android:elevation="100dp"
+        android:elevation="50dp"
         android:text="Каши"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_bakery" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_porridge"
+        app:layout_constraintBottom_toBottomOf="@+id/button_porridge"
+        app:layout_constraintEnd_toEndOf="@+id/button_porridge"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@+id/button_porridge"
+        app:layout_constraintTop_toTopOf="@+id/button_porridge"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
