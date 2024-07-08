@@ -32,12 +32,14 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             adapter = RecipeAdapter(
                 list = RecipeRepository.recipes,
                 onClicked = {
-                    findNavController().navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
+                    // Навигация к DetailRecipeFragment
+                    findNavController()
+                        .navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
                 }
             )
 
             rvRecipes.adapter = adapter
-            rvRecipes.layoutManager =LinearLayoutManager(requireContext())
+            rvRecipes.layoutManager = LinearLayoutManager(requireContext())
         }
     }
 }
