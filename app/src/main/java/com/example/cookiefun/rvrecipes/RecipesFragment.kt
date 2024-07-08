@@ -19,7 +19,9 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
 
         binding = FragmentRecipesBinding.bind(view)
 
-        initAdapter()
+        val category = arguments?.getString("category") ?: "default_category"
+        initAdapter(category)
+        setCategoryTitle(category)
     }
 
     override fun onDestroyView() {
@@ -27,17 +29,40 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
         binding = null
     }
 
-    private fun initAdapter() {
+    private fun setCategoryTitle(category: String) {
+        val title = when (category) {
+            "salad" -> "Салаты"
+            "second" -> "Вторые блюда"
+            "soup" -> "Супы"
+            "bakery" -> "Выпечка"
+            "porridge" -> "Каши"
+            else -> "Рецепты"
+        }
+        binding?.tvCategoryTitle?.text = title
+    }
+
+    private fun initAdapter(category: String) {
         binding?.run {
+            val recipes = when (category) {
+                "salad" -> RecipeRepository.salads
+                "second" -> RecipeRepository.second
+                "soup" -> RecipeRepository.soups
+                "bakery" -> RecipeRepository.bakeries
+                "porridge" -> RecipeRepository.porridge
+                else -> emptyList()
+            }
+
             adapter = RecipeAdapter(
-                list = RecipeRepository.recipes,
-                onClicked = {
-                    findNavController().navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
+                list = recipes,
+                onClicked = { recipe ->
+                    val action = RecipesFragmentDirections
+                        .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
+                    findNavController().navigate(action)
                 }
             )
 
             rvRecipes.adapter = adapter
-            rvRecipes.layoutManager =LinearLayoutManager(requireContext())
+            rvRecipes.layoutManager = LinearLayoutManager(requireContext())
         }
     }
 }

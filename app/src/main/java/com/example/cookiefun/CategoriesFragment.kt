@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
 
@@ -21,23 +22,33 @@ class CategoriesFragment : Fragment(R.layout.fragment_categories) {
         val buttonBakery: Button = view.findViewById(R.id.button_bakery)
 
         buttonSalad.setOnClickListener {
-            findNavController().navigate(R.id.action_categoriesFragment_to_recipesFragment2)
+            val action = CategoriesFragmentDirections
+                .actionCategoriesFragmentToRecipesFragment2("salad")
+            findNavController().navigate(action)
         }
 
         buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_categoriesFragment_to_recipesFragment2)
+            val action = CategoriesFragmentDirections
+                .actionCategoriesFragmentToRecipesFragment2("second")
+            findNavController().navigate(action)
         }
 
         buttonSoup.setOnClickListener {
-            findNavController().navigate(R.id.action_categoriesFragment_to_recipesFragment2)
+            val action = CategoriesFragmentDirections
+                .actionCategoriesFragmentToRecipesFragment2("soup")
+            findNavController().navigate(action)
         }
 
         buttonBakery.setOnClickListener {
-            findNavController().navigate(R.id.action_categoriesFragment_to_recipesFragment2)
+            val action = CategoriesFragmentDirections
+                .actionCategoriesFragmentToRecipesFragment2("bakery")
+            findNavController().navigate(action)
         }
 
         buttonPorridge.setOnClickListener {
-            findNavController().navigate(R.id.action_categoriesFragment_to_recipesFragment2)
+            val action = CategoriesFragmentDirections
+                .actionCategoriesFragmentToRecipesFragment2("porridge")
+            findNavController().navigate(action)
         }
     }
 }
