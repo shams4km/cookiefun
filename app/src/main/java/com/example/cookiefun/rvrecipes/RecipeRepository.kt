@@ -32,4 +32,7 @@ object RecipeRepository {
             caloriesCount = 321
         )
     )
+    fun getRecipeById(recipeId: Int): Recipe? {
+        return recipes.find { it.id == recipeId }
+    }
 }

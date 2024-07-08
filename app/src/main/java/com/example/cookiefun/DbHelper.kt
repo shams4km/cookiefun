@@ -98,5 +98,20 @@ class DbHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         return result
     }
 
+    fun getFavoriteRecipes(userId: Int): List<Int> {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT $COLUMN_RECIPE_ID FROM $TABLE_FAVORITES WHERE $COLUMN_USER_ID = ?", arrayOf(userId.toString()))
+        val recipeIds = mutableListOf<Int>()
+
+        if (cursor.moveToFirst()) {
+            do {
+                val recipeId = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_RECIPE_ID))
+                recipeIds.add(recipeId)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        return recipeIds
+    }
+
 
 }
