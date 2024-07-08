@@ -53,6 +53,19 @@ class DbHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         cursor.close()
         return result
     }
+
+    fun getUserId(login: String, password: String): Int? {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT $COLUMN_ID FROM $TABLE_USERS WHERE $COLUMN_LOGIN = ? AND $COLUMN_PASSWORD = ?", arrayOf(login, password))
+        return if (cursor.moveToFirst()) {
+            val userId = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+            cursor.close()
+            userId
+        } else {
+            cursor.close()
+            null
+        }
+    }
     // метод для удаления пользователя по логину
     fun deleteAllUsers() {
         val db = this.writableDatabase
@@ -84,5 +97,6 @@ class DbHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         cursor.close()
         return result
     }
+
 
 }

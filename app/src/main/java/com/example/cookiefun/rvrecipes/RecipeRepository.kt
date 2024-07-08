@@ -14,7 +14,7 @@ object RecipeRepository {
 
         Recipe(
             id = 2,
-            name = "Recipe1",
+            name = "Recipe2",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
@@ -24,7 +24,7 @@ object RecipeRepository {
 
         Recipe(
             id = 3,
-            name = "Recipe1",
+            name = "Recipe3",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,

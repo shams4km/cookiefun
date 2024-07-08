@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.example.cookiefun.CategoriesFragment"
+        android:name="com.example.cookiefun.rvrecipes.CategoriesFragment"
         android:label="Categories"
         tools:layout="@layout/fragment_categories">
 
@@ -47,7 +47,7 @@
 
     <fragment
         android:id="@+id/favouritesFragment"
-        android:name="com.example.cookiefun.FavouritesFragment"
+        android:name="com.example.cookiefun.rvfavourites.FavouritesFragment"
         android:label="Favourites"
         tools:layout="@layout/fragment_favourites">
 

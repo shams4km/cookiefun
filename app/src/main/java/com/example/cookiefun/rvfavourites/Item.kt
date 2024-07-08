@@ -1,4 +1,4 @@
-package com.example.cookiefun
+package com.example.cookiefun.rvfavourites
 
 data class Item(
     val id: Int,
