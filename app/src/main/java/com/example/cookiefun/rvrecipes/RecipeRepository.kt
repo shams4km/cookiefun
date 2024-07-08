@@ -14,9 +14,9 @@ object RecipeRepository {
 
         Recipe(
             id = 2,
-            name = "Recipe1",
+            name = "Recipe2",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
+            description = "Desc2",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
             caloriesCount = 321
@@ -24,9 +24,9 @@ object RecipeRepository {
 
         Recipe(
             id = 3,
-            name = "Recipe1",
+            name = "Recipe3",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
+            description = "Desc3",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
             caloriesCount = 321
