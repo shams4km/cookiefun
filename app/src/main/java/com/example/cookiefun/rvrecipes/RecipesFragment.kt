@@ -44,6 +44,7 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             adapter = RecipeAdapter(
                 list = RecipeRepository.recipes,
                 onClicked = {
+
                     findNavController().navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
                 },
                 onFavoriteClicked = { recipe -> // Добавляем обработчик для избранного
@@ -58,6 +59,7 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
                             Log.d("Test", "Add Succesfull")
                         }
                     }
+
                 }
             )
 
@@ -72,3 +74,4 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
         return userId.takeIf { it != -1 }
     }
 }
+
