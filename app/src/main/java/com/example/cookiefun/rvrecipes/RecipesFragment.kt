@@ -31,7 +31,9 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             Log.d("RecipesFragment", "User ID loaded: $userId")
         }
 
-        initAdapter()
+        val category = arguments?.getString("category") ?: "default_category"
+        initAdapter(category)
+        setCategoryTitle(category)
     }
 
     override fun onDestroyView() {
@@ -39,27 +41,57 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
         binding = null
     }
 
-    private fun initAdapter() {
-        binding?.run {
-            adapter = RecipeAdapter(
-                list = RecipeRepository.recipes,
-                onClicked = {
+    private fun setCategoryTitle(category: String) {
+        val title = when (category) {
+            "salad" -> "Салаты"
+            "second" -> "Вторые блюда"
+            "soup" -> "Супы"
+            "bakery" -> "Выпечка"
+            "porridge" -> "Каши"
+            else -> "Рецепты"
+        }
+        binding?.tvCategoryTitle?.text = title
+    }
 
-                    findNavController().navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
+    private fun initAdapter(category: String) {
+        binding?.run {
+            val recipes = when (category) {
+                "salad" -> RecipeRepository.salads
+                "second" -> RecipeRepository.second
+                "soup" -> RecipeRepository.soups
+                "bakery" -> RecipeRepository.bakeries
+                "porridge" -> RecipeRepository.porridge
+                else -> emptyList()
+            }
+
+            adapter = RecipeAdapter(
+                list = recipes,
+                onClicked = { recipe ->
+                    val action = RecipesFragmentDirections
+                        .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
+
+                    findNavController().navigate(action)
                 },
                 onFavoriteClicked = { recipe -> // Добавляем обработчик для избранного
                     userId?.let { id ->
                         if (dbHelper.isFavorite(id, recipe.id)) {
                             dbHelper.removeFavorite(id, recipe.id)
                             Log.d("Test", "Remove Succesfull")
-                            Toast.makeText(requireContext(), "${recipe.name} удален из избранного", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "${recipe.name} удален из избранного",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         } else {
                             dbHelper.addFavorite(id, recipe.id)
-                            Toast.makeText(requireContext(), "${recipe.name} добавлен в избранное", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "${recipe.name} добавлен в избранное",
+                                Toast.LENGTH_SHORT
+                            ).show()
                             Log.d("Test", "Add Succesfull")
                         }
                     }
-
                 }
             )
 
@@ -67,8 +99,10 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             rvRecipes.layoutManager = LinearLayoutManager(requireContext())
         }
     }
+
     private fun getUserIdFromSharedPreferences(): Int? {
-        val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
         val userId = sharedPreferences.getInt("user_id", -1)
         Log.d("RecipesFragment", "Loaded user_id from SharedPreferences: $userId")
         return userId.takeIf { it != -1 }

@@ -51,10 +51,11 @@ class RegisterActivity : AppCompatActivity() {
                 val db = DbHelper(this, null)
                 db.addUser(user)
 
-                // Сохраняем логин в SharedPreferences
+                // Сохраняем логин и почту в SharedPreferences
                 val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                 with(sharedPreferences.edit()) {
                     putString("login", login)
+                    putString("email", mail)
                     apply()
                 }
 

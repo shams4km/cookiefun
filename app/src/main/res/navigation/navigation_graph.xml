@@ -74,7 +74,11 @@
         android:id="@+id/detailRecipeFragment2"
         android:name="com.example.cookiefun.rvrecipes.DetailRecipeFragment"
         android:label="fragment_detail_recipe"
-        tools:layout="@layout/fragment_detail_recipe" />
+        tools:layout="@layout/fragment_detail_recipe">
+        <argument
+            android:name="recipe"
+            app:argType="com.example.cookiefun.rvrecipes.Recipe"/>
+    </fragment>
     <fragment
         android:id="@+id/recipesFragment2"
         android:name="com.example.cookiefun.rvrecipes.RecipesFragment"
@@ -82,6 +86,10 @@
         <action
             android:id="@+id/action_recipesFragment2_to_detailRecipeFragment2"
             app:destination="@id/detailRecipeFragment2" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="default_category" />
     </fragment>
 
 </navigation>
