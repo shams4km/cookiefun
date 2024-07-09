@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.cookiefun.R
 import com.example.cookiefun.databinding.FragmentDetailRecipeBinding
@@ -40,4 +41,6 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
         super.onDestroyView()
         binding = null
     }
+
+
 }

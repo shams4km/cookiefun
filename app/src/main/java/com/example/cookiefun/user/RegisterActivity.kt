@@ -1,17 +1,17 @@
-package com.example.cookiefun
+package com.example.cookiefun.user
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.NavController
+import com.example.cookiefun.DbHelper
+import com.example.cookiefun.R
 
 
 class RegisterActivity : AppCompatActivity() {

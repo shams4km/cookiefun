@@ -25,11 +25,14 @@
         <action
             android:id="@+id/action_homeFragment_to_authActivity"
             app:destination="@id/action_homeFragment_to_authActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailRecipeFragment2"
+            app:destination="@id/detailRecipeFragment2" />
     </fragment>
 
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.example.cookiefun.CategoriesFragment"
+        android:name="com.example.cookiefun.rvrecipes.CategoriesFragment"
         android:label="Categories"
         tools:layout="@layout/fragment_categories">
 
@@ -47,7 +50,7 @@
 
     <fragment
         android:id="@+id/favouritesFragment"
-        android:name="com.example.cookiefun.FavouritesFragment"
+        android:name="com.example.cookiefun.rvfavourites.FavouritesFragment"
         android:label="Favourites"
         tools:layout="@layout/fragment_favourites">
 
@@ -64,7 +67,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.cookiefun.ProfileFragment"
+        android:name="com.example.cookiefun.user.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
