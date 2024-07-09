@@ -69,6 +69,7 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
                 onClicked = { recipe ->
                     val action = RecipesFragmentDirections
                         .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
+
                     findNavController().navigate(action)
                 },
                 onFavoriteClicked = { recipe -> // Добавляем обработчик для избранного
