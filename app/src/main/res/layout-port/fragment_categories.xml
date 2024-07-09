@@ -9,16 +9,16 @@
 
     <Button
         android:id="@+id/button_salad"
-        android:layout_width="290dp"
-        android:layout_height="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="50dp"
         android:text="Салаты"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/button_porridge"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,23 +28,23 @@
         android:src="@drawable/ic_salad"
         app:layout_constraintBottom_toBottomOf="@+id/button_salad"
         app:layout_constraintEnd_toEndOf="@+id/button_salad"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="@+id/button_salad"
         app:layout_constraintTop_toTopOf="@+id/button_salad"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_second"
-        android:layout_width="290dp"
-        android:layout_height="65dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="50dp"
-        android:text="Второе"
         android:textSize="20sp"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Второе"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_salad" />
 
@@ -54,23 +54,22 @@
         android:src="@drawable/ic_second"
         app:layout_constraintBottom_toBottomOf="@+id/button_second"
         app:layout_constraintEnd_toEndOf="@+id/button_second"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="@+id/button_second"
         app:layout_constraintTop_toTopOf="@+id/button_second"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_soup"
-        android:layout_width="290dp"
-        android:layout_height="65dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="50dp"
-        android:text="Супы"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/button_porridge"
-        app:layout_constraintHorizontal_bias="0.727"
+        android:text="Супы"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_second" />
 
@@ -80,26 +79,24 @@
         android:src="@drawable/ic_soup"
         app:layout_constraintBottom_toBottomOf="@+id/button_soup"
         app:layout_constraintEnd_toEndOf="@+id/button_soup"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="@+id/button_soup"
         app:layout_constraintTop_toTopOf="@+id/button_soup"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_bakery"
-        android:layout_width="290dp"
-        android:layout_height="65dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="50dp"
-        android:text="Выпечка"
         android:textSize="20sp"
+        android:layout_marginTop="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Выпечка"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toEndOf="@+id/button_salad"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_soup" />
 
     <ImageView
         android:layout_width="40dp"
@@ -107,27 +104,24 @@
         android:src="@drawable/ic_bakery"
         app:layout_constraintBottom_toBottomOf="@+id/button_bakery"
         app:layout_constraintEnd_toEndOf="@+id/button_bakery"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="@+id/button_bakery"
         app:layout_constraintTop_toTopOf="@+id/button_bakery"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_porridge"
-        android:layout_width="290dp"
-        android:layout_height="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="65dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
+        android:textSize="20sp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="50dp"
         android:text="Каши"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toEndOf="@+id/button_second"
-        app:layout_constraintTop_toBottomOf="@+id/button_bakery"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_bakery" />
 
     <ImageView
         android:layout_width="40dp"
@@ -135,10 +129,10 @@
         android:src="@drawable/ic_porridge"
         app:layout_constraintBottom_toBottomOf="@+id/button_porridge"
         app:layout_constraintEnd_toEndOf="@+id/button_porridge"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="@+id/button_porridge"
         app:layout_constraintTop_toTopOf="@+id/button_porridge"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

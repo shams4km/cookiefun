@@ -9,61 +9,56 @@
 
     <ImageView
         android:id="@+id/ivRecipeImage"
-        android:layout_width="259dp"
-        android:layout_height="136dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="30dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription"
-        tools:src="@drawable/ic_launcher_background" />
+        tools:src="@drawable/ic_launcher_background"
+        />
 
     <TextView
         android:id="@+id/tvRecipeName"
-        android:layout_width="370dp"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/interbold"
+        android:layout_marginHorizontal="30dp"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:fontFamily="@font/interbold"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="332dp"
-        tools:text="Recipe_Name" />
+        app:layout_constraintTop_toBottomOf="@+id/ivRecipeImage"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Recipe_Name"/>
 
     <TextView
         android:id="@+id/tvRecipeDisc"
-        android:layout_width="370dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/interbold"
         android:textColor="@color/white"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toEndOf="@+id/ivRecipeImage"
         app:layout_constraintTop_toBottomOf="@+id/tvRecipeName"
+        tools:layout_editor_absoluteX="30dp"
         tools:text="Description" />
 
     <ListView
         android:id="@+id/lvIngr"
-        android:layout_width="334dp"
-        android:layout_height="216dp"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toEndOf="@+id/ivRecipeImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRecipeDisc"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintVertical_bias="0.285" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

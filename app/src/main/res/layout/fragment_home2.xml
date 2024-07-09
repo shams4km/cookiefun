@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,72 +11,133 @@
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:text="Главная"
         android:textColor="#FFFFFF"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginBottom="16dp"
-        android:queryHint="Поиск рецепта..."
-        android:iconifiedByDefault="false"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="108dp"
+        android:background="@drawable/searchview_background"
         android:backgroundTint="@color/white"
+        android:iconifiedByDefault="false"
         android:queryBackground="@android:color/transparent"
-        android:background="@drawable/searchview_background"/>
+        android:queryHint="Поиск рецепта..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recipeOfDayTextView"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345">
+
+    </SearchView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/searchView"
-        android:visibility="gone"
-        />
+        android:visibility="gone"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:elevation="4dp" />
-
-    <TextView
-        android:id="@+id/recipeOfDayHeadTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recipeOfDayImageView"
-        android:padding="16dp"
-        android:text="Предлагаем попробовать:"
-        android:textColor="@color/text_white"
-        android:textSize="20sp" />
+        android:elevation="4dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/recipeOfDayTextView"
-        android:layout_width="match_parent"
+        android:layout_width="151dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/recipeOfDayImageView"
+        android:layout_marginBottom="20dp"
         android:padding="16dp"
         android:text="@string/recipe_of_the_day"
         android:textColor="@color/text_white"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/recipeOfDayHeadTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeOfDayImageView"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:text="Предлагаем попробовать:"
+        android:textColor="@color/text_white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recipeOfDayImageView"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517"
+        tools:ignore="NotSibling" />
 
     <ImageView
         android:id="@+id/recipeOfDayImageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/rounded_corners_background"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/recipe_image"
+        android:elevation="160dp"
         android:onClick="onRecipeOfDayClicked"
-        android:contentDescription="@string/recipe_image" />
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
 
 
+    <!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:elevation="160dp" >-->
+
+<!--    </FrameLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="225dp"-->
+<!--        android:layout_height="225dp"-->
+<!--        android:layout_marginEnd="72dp"-->
+<!--        android:background="@drawable/frame_drawable"-->
+<!--        android:contentDescription="@string/recipe_image"-->
+<!--        android:elevation="160dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        tools:layout_editor_absoluteY="133dp" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/recipeOfDayImageView"-->
+<!--        android:layout_width="225dp"-->
+<!--        android:layout_height="225dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:contentDescription="@string/recipe_image"-->
+<!--        android:elevation="160dp"-->
+<!--        android:onClick="onRecipeOfDayClicked"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        tools:layout_editor_absoluteX="300dp"-->
+<!--        tools:layout_editor_absoluteY="133dp" />-->
 
 
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

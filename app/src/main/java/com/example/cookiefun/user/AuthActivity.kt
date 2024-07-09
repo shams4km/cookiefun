@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.cookiefun.DbHelper
 import com.example.cookiefun.HomeActivity
 import com.example.cookiefun.R
+import com.google.android.material.textfield.TextInputEditText
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,8 +27,8 @@ class AuthActivity : AppCompatActivity() {
             insets
         }
 
-        val userLogin: EditText = findViewById(R.id.user_login_auth)
-        val userPassword: EditText = findViewById(R.id.user_password_auth)
+        val userLogin: TextInputEditText = findViewById(R.id.user_login_auth)
+        val userPassword: TextInputEditText = findViewById(R.id.user_password_auth)
         val button: Button = findViewById(R.id.button_auth)
         val linkToReg: TextView = findViewById(R.id.link_to_reg)
 
@@ -52,8 +53,8 @@ class AuthActivity : AppCompatActivity() {
 
                     Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG).show()
 
-                    userLogin.text.clear()
-                    userPassword.text.clear()
+                    userLogin.text?.clear()
+                    userPassword.text?.clear()
 
                     // Переход на HomeActivity
                     val intent = Intent(this, HomeActivity::class.java)

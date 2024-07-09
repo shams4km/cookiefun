@@ -7,16 +7,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/image_back"
-    tools:context=".user.AuthActivity">
+    tools:context=".user.RegisterActivity">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="170dp"
         android:fontFamily="@font/interbold"
-        android:text="Вход"
+        android:text="Регистрация"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -24,59 +24,58 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="220dp"
         android:layout_height="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
         android:ems="10"
         android:inputType="text"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
         android:hint="Введите логин">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/user_login_auth"
+            android:id="@+id/user_login"
             android:layout_width="match_parent"
-            android:layout_height="70dp" />
+            android:layout_height="70dp"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-<!--    <EditText-->
-<!--        android:id="@+id/user_login_auth"-->
-<!--        android:layout_width="220dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:ems="10"-->
-<!--        android:hint="Введите логин"-->
-<!--        android:inputType="text" />-->
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="220dp"
         android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:hint="Введите пароль"
+        android:ems="10"
         android:inputType="text"
-        app:endIconMode="password_toggle">
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
+        android:hint="Введите почту">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/user_password_auth"
+            android:id="@+id/user_mail"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:inputType="textPassword" />
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <EditText-->
-<!--        android:id="@+id/user_password_auth"-->
-<!--        android:layout_width="220dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:ems="10"-->
-<!--        android:hint="Введите пароль"-->
-<!--        android:inputType="text" />-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
+        android:hint="Введите пароль"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_password"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_auth"
+        android:id="@+id/button_reg"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
@@ -84,22 +83,22 @@
         android:backgroundTint="@color/pinkLight"
         android:elevation="10dp"
         android:enabled="true"
-        android:text="Войти"
+        android:text="Подтвердить"
         android:textColor="@color/white"
         android:textColorLink="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:cornerRadius="15dp"
-        app:iconTint="@color/white" />
+        app:iconTint="@color/white"
+        app:cornerRadius="15dp"/>
 
     <TextView
-        android:id="@+id/link_to_reg"
+        android:id="@+id/link_to_auth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/inter2"
-        android:text="Зарегистрироваться"
+        android:text="Авторизоваться"
         android:textColor="@color/white"
         android:textSize="17sp" />
 
