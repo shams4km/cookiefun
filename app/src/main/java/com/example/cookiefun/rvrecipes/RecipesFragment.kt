@@ -69,16 +69,26 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
                 onClicked = { recipe ->
                     val action = RecipesFragmentDirections
                         .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
-                    findNavController().navigate(action)},
+
+                    findNavController().navigate(action)
+                },
                 onFavoriteClicked = { recipe -> // Добавляем обработчик для избранного
                     userId?.let { id ->
                         if (dbHelper.isFavorite(id, recipe.id)) {
                             dbHelper.removeFavorite(id, recipe.id)
                             Log.d("Test", "Remove Succesfull")
-                            Toast.makeText(requireContext(), "${recipe.name} удален из избранного", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "${recipe.name} удален из избранного",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         } else {
                             dbHelper.addFavorite(id, recipe.id)
-                            Toast.makeText(requireContext(), "${recipe.name} добавлен в избранное", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "${recipe.name} добавлен в избранное",
+                                Toast.LENGTH_SHORT
+                            ).show()
                             Log.d("Test", "Add Succesfull")
                         }
                     }
@@ -89,8 +99,10 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             rvRecipes.layoutManager = LinearLayoutManager(requireContext())
         }
     }
+
     private fun getUserIdFromSharedPreferences(): Int? {
-        val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
         val userId = sharedPreferences.getInt("user_id", -1)
         Log.d("RecipesFragment", "Loaded user_id from SharedPreferences: $userId")
         return userId.takeIf { it != -1 }
