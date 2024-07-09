@@ -59,4 +59,5 @@ class FavouritesFragment : Fragment() {
         Log.d("RecipesFragment", "Loaded user_id from SharedPreferences: $userId")
         return userId.takeIf { it != -1 }
     }
+
 }

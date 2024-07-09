@@ -31,8 +31,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/ic_launcher_background"
-            />
+            tools:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/tvRecipeName"
@@ -45,7 +44,7 @@
             android:textSize="24sp"
             app:layout_constraintTop_toBottomOf="@+id/ivRecipeImage"
             tools:layout_editor_absoluteX="16dp"
-            tools:text="Recipe_Name"/>
+            tools:text="Recipe_Name" />
 
         <ImageView
             android:id="@+id/ivFavorite"
@@ -58,7 +57,6 @@
             android:src="@drawable/ic_fav_red"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
