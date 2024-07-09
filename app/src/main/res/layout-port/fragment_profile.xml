@@ -7,7 +7,6 @@
     android:background="@drawable/image_back"
     tools:context=".user.ProfileFragment">
 
-
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
@@ -21,47 +20,43 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <TextView
-        android:id="@+id/text_login"
-        android:layout_width="210dp"
-        android:layout_height="55dp"
+    <ImageButton
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.718"
+        android:background="@android:color/transparent"
+        android:contentDescription="Profile Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_prof2"
+        app:layout_constraintEnd_toStartOf="@id/text_login"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_title" />
 
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="124dp"
-        android:layout_height="134dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Profile Image"
-        android:src="@drawable/baseline_person_24"
-        app:layout_constraintBottom_toTopOf="@id/text_login"
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@id/text_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_title"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toTopOf="@id/profile_image" />
 
     <TextView
-        android:id="@+id/email"
-        android:layout_width="210dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="154dp"
-        android:text="EMAIL"
+        android:id="@+id/text_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_logout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toEndOf="@+id/profile_image"
-        app:layout_constraintTop_toTopOf="@+id/main_title"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/text_login" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_logout"
@@ -69,7 +64,7 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="10dp"
         android:enabled="true"
@@ -80,11 +75,10 @@
         android:textStyle="bold"
         app:cornerRadius="15dp"
         app:iconTint="@color/white"
-
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintBottom_toTopOf="@+id/button_delete_account"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_delete_account"
@@ -92,7 +86,7 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="308dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="@color/pinkLight"
         android:elevation="10dp"
         android:enabled="true"
@@ -106,7 +100,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_logout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintRight_toRightOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
