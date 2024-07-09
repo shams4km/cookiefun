@@ -31,7 +31,9 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             Log.d("RecipesFragment", "User ID loaded: $userId")
         }
 
-        initAdapter()
+        val category = arguments?.getString("category") ?: "default_category"
+        initAdapter(category)
+        setCategoryTitle(category)
     }
 
     override fun onDestroyView() {
@@ -39,9 +41,35 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
         binding = null
     }
 
-    private fun initAdapter() {
+    private fun setCategoryTitle(category: String) {
+        val title = when (category) {
+            "salad" -> "Салаты"
+            "second" -> "Вторые блюда"
+            "soup" -> "Супы"
+            "bakery" -> "Выпечка"
+            "porridge" -> "Каши"
+            else -> "Рецепты"
+        }
+        binding?.tvCategoryTitle?.text = title
+    }
+
+    private fun initAdapter(category: String) {
         binding?.run {
+            val recipes = when (category) {
+                "salad" -> RecipeRepository.salads
+                "second" -> RecipeRepository.second
+                "soup" -> RecipeRepository.soups
+                "bakery" -> RecipeRepository.bakeries
+                "porridge" -> RecipeRepository.porridge
+                else -> emptyList()
+            }
+
             adapter = RecipeAdapter(
+//                list = recipes,
+//                onClicked = { recipe ->
+//                    val action = RecipesFragmentDirections
+//                        .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
+//                    findNavController().navigate(action)
                 list = RecipeRepository.recipes,
                 onClicked = {
 
@@ -59,7 +87,6 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
                             Log.d("Test", "Add Succesfull")
                         }
                     }
-
                 }
             )
 
