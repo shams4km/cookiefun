@@ -10,5 +10,4 @@ data class Recipe (
     val rating: Double,
     val url: String,
     val caloriesCount: Int,
-    val category: String
 ) : Serializable

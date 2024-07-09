@@ -3,123 +3,307 @@ package com.example.cookiefun.rvrecipes
 object RecipeRepository {
     val recipes: List<Recipe> = mutableListOf(
         Recipe(
-            id = 1,
-            name = "Recipe1",
-            ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
-            rating = 5.0,
-            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "salad"
-        ),
-
-        Recipe(
-            id = 2,
-            name = "Recipe2",
-            ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
-            rating = 5.0,
-            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "porridge"
-        ),
-
-        Recipe(
-            id = 3,
-            name = "Recipe3",
-            ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
-            rating = 5.0,
-            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "second"
-        ),
-
-        Recipe(
             id = 4,
-            name = "Recipe4",
+            name = "Porridge1",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "bakery"
+            caloriesCount = 321
         ),
 
         Recipe(
             id = 5,
-            name = "Recipe5",
+            name = "Porridge2",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "soup"
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 6,
+            name = "Porridge3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+        Recipe(
+            id = 7,
+            name = "Salad1",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 8,
+            name = "Salad2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 9,
+            name = "Salad3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+        Recipe(
+            id = 10,
+            name = "Second1",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 11,
+            name = "Second2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 12,
+            name = "Second3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+        Recipe(
+            id = 13,
+            name = "Bakery1",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 14,
+            name = "Bakery2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+        Recipe(
+            id = 15,
+            name = "Bakery3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+        Recipe(
+            id = 16,
+            name = "Soup1",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 17,
+            name = "Soup2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 18,
+            name = "Soup3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc3",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
         )
     )
 
     val porridge: List<Recipe> = mutableListOf(
         Recipe(
-            id = 2,
-            name = "Recipe2",
+            id = 4,
+            name = "Porridge1",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "porridge"
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 5,
+            name = "Porridge2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 6,
+            name = "Porridge3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
         )
     )
 
     val salads: List<Recipe> = mutableListOf(
         Recipe(
-            id = 1,
-            name = "Recipe1",
+            id = 7,
+            name = "Salad1",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "salad"
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 8,
+            name = "Salad2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 9,
+            name = "Salad3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
         )
     )
 
     val second: List<Recipe> = mutableListOf(
         Recipe(
-            id = 3,
-            name = "Recipe3",
+            id = 10,
+            name = "Second1",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "second"
+            caloriesCount = 321
+        ),
+        Recipe(
+            id = 11,
+            name = "Second2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 12,
+            name = "Second3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
         )
     )
 
     val bakeries: List<Recipe> = mutableListOf(
         Recipe(
-            id = 4,
-            name = "Recipe4",
+            id = 13,
+            name = "Bakery1",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "bakery"
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 14,
+            name = "Bakery2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 15,
+            name = "Bakery3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
         )
     )
 
     val soups: List<Recipe> = mutableListOf(
         Recipe(
-            id = 5,
-            name = "Recipe5",
+            id = 16,
+            name = "Soup1",
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
             url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
-            caloriesCount = 321,
-            category = "soup"
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 17,
+            name = "Soup2",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc1",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
+        ),
+
+        Recipe(
+            id = 18,
+            name = "Soup3",
+            ingredients = mutableListOf("ing1", "ing2", "ing3"),
+            description = "Desc3",
+            rating = 5.0,
+            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            caloriesCount = 321
         )
     )
     fun getRecipeById(recipeId: Int): Recipe? {
