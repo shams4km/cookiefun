@@ -1,7 +1,9 @@
 // FavouritesFragment.kt
 package com.example.cookiefun.rvfavourites
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +33,9 @@ class FavouritesFragment : Fragment() {
 
         // Получение избранных рецептов для текущего пользователя (замените userId на реальный id пользователя)
         val userId = getCurrentUserId() // например, получение текущего пользователя из сессии или SharedPreferences
-        loadFavoriteRecipes(userId)
+        if (userId != null) {
+            loadFavoriteRecipes(userId)
+        }
 
         return view
     }
@@ -49,8 +53,10 @@ class FavouritesFragment : Fragment() {
         }.start()
     }
 
-    private fun getCurrentUserId(): Int {
-        // Вернуть реальный id текущего пользователя
-        return 1 // Например, временно возвращаем какой-то id
+    private fun getCurrentUserId(): Int? {
+        val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val userId = sharedPreferences.getInt("user_id", -1)
+        Log.d("RecipesFragment", "Loaded user_id from SharedPreferences: $userId")
+        return userId.takeIf { it != -1 }
     }
 }

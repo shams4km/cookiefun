@@ -65,16 +65,11 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
             }
 
             adapter = RecipeAdapter(
-//                list = recipes,
-//                onClicked = { recipe ->
-//                    val action = RecipesFragmentDirections
-//                        .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
-//                    findNavController().navigate(action)
-                list = RecipeRepository.recipes,
-                onClicked = {
-
-                    findNavController().navigate(R.id.action_recipesFragment2_to_detailRecipeFragment2)
-                },
+                list = recipes,
+                onClicked = { recipe ->
+                    val action = RecipesFragmentDirections
+                        .actionRecipesFragment2ToDetailRecipeFragment2(recipe)
+                    findNavController().navigate(action)},
                 onFavoriteClicked = { recipe -> // Добавляем обработчик для избранного
                     userId?.let { id ->
                         if (dbHelper.isFavorite(id, recipe.id)) {
