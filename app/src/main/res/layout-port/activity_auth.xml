@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="170dp"
         android:fontFamily="@font/interbold"
         android:text="Вход"
         android:textColor="@color/white"
@@ -37,15 +37,15 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <EditText-->
-<!--        android:id="@+id/user_login_auth"-->
-<!--        android:layout_width="220dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:ems="10"-->
-<!--        android:hint="Введите логин"-->
-<!--        android:inputType="text" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/user_login_auth"-->
+    <!--        android:layout_width="220dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="Введите логин"-->
+    <!--        android:inputType="text" />-->
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -65,15 +65,15 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <EditText-->
-<!--        android:id="@+id/user_password_auth"-->
-<!--        android:layout_width="220dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:ems="10"-->
-<!--        android:hint="Введите пароль"-->
-<!--        android:inputType="text" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/user_password_auth"-->
+    <!--        android:layout_width="220dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="Введите пароль"-->
+    <!--        android:inputType="text" />-->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_auth"
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/inter2"
         android:text="Зарегистрироваться"
         android:textColor="@color/white"

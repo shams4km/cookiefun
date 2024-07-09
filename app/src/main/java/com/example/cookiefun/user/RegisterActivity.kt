@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.cookiefun.DbHelper
 import com.example.cookiefun.R
+import com.google.android.material.textfield.TextInputEditText
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -26,9 +27,9 @@ class RegisterActivity : AppCompatActivity() {
             insets
         }
 
-        val userLogin: EditText = findViewById(R.id.user_login)
-        val userPassword: EditText = findViewById(R.id.user_password)
-        val userMail: EditText = findViewById(R.id.user_mail)
+        val userLogin: TextInputEditText = findViewById(R.id.user_login)
+        val userPassword: TextInputEditText = findViewById(R.id.user_password)
+        val userMail: TextInputEditText = findViewById(R.id.user_mail)
         val button: Button = findViewById(R.id.button_reg)
         val linkToAuth: TextView = findViewById(R.id.link_to_auth)
 
@@ -60,9 +61,9 @@ class RegisterActivity : AppCompatActivity() {
 
                 Toast.makeText(this, "Пользователь $login добавлен", Toast.LENGTH_LONG).show()
 
-                userLogin.text.clear()
-                userPassword.text.clear()
-                userMail.text.clear()
+                userLogin.text?.clear()
+                userPassword.text?.clear()
+                userMail.text?.clear()
             }
         }
 
