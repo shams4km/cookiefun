@@ -64,6 +64,10 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
                 else -> emptyList()
             }
 
+            recipes.forEach { recipe ->
+                recipe.isFavorite = userId?.let { dbHelper.isFavorite(it, recipe.id) } ?: false
+            }
+
             adapter = RecipeAdapter(
                 list = recipes,
                 onClicked = { recipe ->
@@ -72,24 +76,22 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
 
                     findNavController().navigate(action)
                 },
-                onFavoriteClicked = { recipe -> // Добавляем обработчик для избранного
+                onFavoriteClicked = { recipe -> // Обработчик для избранного
                     userId?.let { id ->
-                        if (dbHelper.isFavorite(id, recipe.id)) {
-                            dbHelper.removeFavorite(id, recipe.id)
-                            Log.d("Test", "Remove Succesfull")
-                            Toast.makeText(
-                                requireContext(),
-                                "${recipe.name} удален из избранного",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        } else {
+                        if (recipe.isFavorite) {
                             dbHelper.addFavorite(id, recipe.id)
                             Toast.makeText(
                                 requireContext(),
                                 "${recipe.name} добавлен в избранное",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            Log.d("Test", "Add Succesfull")
+                        } else {
+                            dbHelper.removeFavorite(id, recipe.id)
+                            Toast.makeText(
+                                requireContext(),
+                                "${recipe.name} удален из избранного",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
                 }

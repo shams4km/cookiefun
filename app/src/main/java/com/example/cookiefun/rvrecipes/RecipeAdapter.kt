@@ -11,11 +11,8 @@ class RecipeAdapter(
     private val onFavoriteClicked: (Recipe) -> Unit
 ): RecyclerView.Adapter<RecipeHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeHolder {
-        return RecipeHolder(
-            ItemRecipeBinding.inflate(LayoutInflater.from(parent.context), parent, false),
-            onClicked,
-            onFavoriteClicked
-        )
+        val binding = ItemRecipeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return RecipeHolder(binding, onClicked, onFavoriteClicked)
     }
 
     override fun getItemCount(): Int = list.size
