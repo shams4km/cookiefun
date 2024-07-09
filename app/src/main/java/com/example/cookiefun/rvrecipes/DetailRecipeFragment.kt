@@ -19,28 +19,46 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
 
         binding = FragmentDetailRecipeBinding.bind(view)
 
-        val args: DetailRecipeFragmentArgs by navArgs()
-        val recipe = args.recipe
+        val source = arguments?.getString("source")
+        if (source != null) {
+            val recipeName = arguments?.getString("recipeName")
+            val recipeImageUrl = arguments?.getString("recipeImageUrl")
+            val ingredients = arguments?.getStringArrayList("ingredients")
+            val description = arguments?.getString("description")
 
-        binding?.apply {
-            tvRecipeName.text = recipe.name
-            tvRecipeDisc.text = recipe.description
-            ivRecipeImage.load(recipe.url)
+            binding?.tvRecipeName?.text = recipeName
+            binding?.tvRecipeDisc?.text = description
 
-            val adapter = ArrayAdapter(
-                requireContext(),
-                android.R.layout.simple_list_item_1,
-                recipe.ingredients
-            )
-            lvIngr.adapter = adapter
+            binding?.ivRecipeImage?.load(recipeImageUrl) {
+                crossfade(true)
+                placeholder(R.drawable.frame_drawable)
+            }
+
+            ingredients?.let {
+                val listView = binding?.lvIngr
+                val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, it)
+                listView?.adapter = adapter
+            }
+        } else {
+            val args: DetailRecipeFragmentArgs by navArgs()
+            val recipe = args.recipe
+
+            binding?.apply {
+                tvRecipeName.text = recipe.name
+                tvRecipeDisc.text = recipe.description
+                ivRecipeImage.load(recipe.url)
+
+                val adapter = ArrayAdapter(
+                    requireContext(),
+                    android.R.layout.simple_list_item_1,
+                    recipe.ingredients
+                )
+                lvIngr.adapter = adapter
+            }
         }
-
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
-
-
 }

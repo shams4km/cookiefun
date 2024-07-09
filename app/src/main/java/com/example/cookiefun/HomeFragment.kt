@@ -2,6 +2,7 @@ package com.example.cookiefun
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -57,7 +58,7 @@ class HomeFragment : Fragment() {
 
         adapter = MyAdapter(filteredList, object : OnItemClickListener {
             override fun onItemClick(recipe: Recipe) {
-                navigateToDetail(recipe)
+                navigateToDetail(recipe, "fromSearch")
             }
         })
         recyclerView.adapter = adapter
@@ -112,12 +113,13 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun navigateToDetail(recipe: Recipe) {
+    private fun navigateToDetail(recipe: Recipe, source: String) {
         val bundle = Bundle().apply {
             putString("recipeName", recipe.name)
             putString("recipeImageUrl", recipe.url)
             putStringArrayList("ingredients", ArrayList(recipe.ingredients))
             putString("description", recipe.description)
+            putString("source", source)
         }
         findNavController().navigate(R.id.action_homeFragment_to_detailRecipeFragment2, bundle)
     }
@@ -129,17 +131,21 @@ class HomeFragment : Fragment() {
             crossfade(true)
         }
         recipeOfDayTextView.text = randomRecipe?.name
-
     }
 
     fun onRecipeOfDayClicked(view: View) {
-        val bundle = Bundle().apply {
-            putString("recipeName", randomRecipe?.name)
-            putString("recipeImageUrl", randomRecipe?.url)
-            putStringArrayList("ingredients", ArrayList(randomRecipe?.ingredients))
-            putString("description", randomRecipe?.description)
+        randomRecipe?.let {
+            val bundle = Bundle().apply {
+                putString("recipeName", it.name)
+                putString("recipeImageUrl", it.url)
+                putStringArrayList("ingredients", ArrayList(it.ingredients))
+                putString("description", it.description)
+                putString("source", "fromHome")
+            }
+            findNavController().navigate(R.id.action_homeFragment_to_detailRecipeFragment2, bundle)
+        } ?: run {
+            Log.e("HomeFragment", "Random recipe is null")
         }
-        findNavController().navigate(R.id.action_homeFragment_to_detailRecipeFragment2, bundle)
     }
 
 

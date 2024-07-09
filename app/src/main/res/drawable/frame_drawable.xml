@@ -3,7 +3,7 @@
     <solid android:color="#00000000"/> <!-- Прозрачный фон -->
     <stroke
         android:width="25dp"
-        android:color="#C57A7A"/> <!-- Цвет рамки -->
+        android:color="@android:color/transparent"/><!-- Цвет рамки -->
     <padding
         android:left="10dp"
         android:top="10dp"
