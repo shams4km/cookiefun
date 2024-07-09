@@ -9,5 +9,6 @@ data class Recipe (
     val description: String,
     val rating: Double,
     val url: String,
-    val caloriesCount: Int
+    val caloriesCount: Int,
+    val category: String
 ) : Serializable
