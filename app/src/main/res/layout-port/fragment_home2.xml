@@ -24,18 +24,18 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="16dp"
-        android:queryHint="Поиск рецепта..."
-        android:iconifiedByDefault="false"
+        android:background="@drawable/searchview_background"
         android:backgroundTint="@color/white"
+        android:iconifiedByDefault="false"
         android:queryBackground="@android:color/transparent"
-        android:background="@drawable/searchview_background"/>
+        android:queryHint="Поиск рецепта..." />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/searchView"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -66,26 +66,17 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="160dp" >
+        android:layout_height="225dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/frame_drawable"
+        android:contentDescription="@string/recipe_image"
+        android:elevation="160dp"
+        android:onClick="onRecipeOfDayClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/recipeOfDayImageView"
-            android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:contentDescription="@string/recipe_image"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:elevation="160dp"
-            android:onClick="onRecipeOfDayClicked" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:background="@drawable/frame_drawable"
-            android:contentDescription="@string/recipe_image"
-            android:scaleType="centerCrop"
-            android:elevation="160dp" />
-    </FrameLayout>
-
-</LinearLayout>
+    </LinearLayout>
