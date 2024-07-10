@@ -27,11 +27,7 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
             tvRecipeDisc.text = recipe.description
             ivRecipeImage.load(recipe.url)
 
-            val adapter = ArrayAdapter(
-                requireContext(),
-                android.R.layout.simple_list_item_1,
-                recipe.ingredients
-            )
+            val adapter = IngredientAdapter(requireContext(), recipe.ingredients)
             lvIngr.adapter = adapter
         }
 
@@ -41,6 +37,4 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
         super.onDestroyView()
         binding = null
     }
-
-
 }

@@ -4,11 +4,21 @@ object RecipeRepository {
     val recipes: List<Recipe> = mutableListOf(
         Recipe(
             id = 4,
-            name = "Porridge1",
-            ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
+            name = "Манная овсяная каша",
+            ingredients = mutableListOf("Манная крупа - 4 ст. ложки (100 г)",
+                "Овсяные хлопья - 4 ст. ложки (56 г)",
+                "Молоко - 500 мл",
+                "Вода - 500 мл",
+                "Соль - 1 ч. ложка",
+                "Сахар - 2 ст. ложки (по вкусу)",
+                "Масло сливочное - по вкусу"),
+            description = "В кастрюлю наливаем воду, молоко и ставим на огонь. Насыпаем овсяные хлопья, после закипания варим на среднем огне 2-3 минуты.\n" +
+                    "Затем тонкой струйкой всыпаем манку, постоянно помешивая венчиком. Добавляем в кашу соль, сахар, перемешиваем.\n" +
+                    "Варим кашу на медленном огне 5-7 минут. Как только каша начинает густеть, выключить огонь, закрыть крышкой, дать каше настояться.\n" +
+                    "В готовую кашу добавить кусочек сливочного масла, каша будет еще вкуснее! Отличным дополнением станут свежие ягоды, фрукты.\n" +
+                    "Манно-овсяная каша готова.",
             rating = 5.0,
-            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            url = "https://img1.russianfood.com/dycontent/images_upl/567/sm_566912.jpg",
             caloriesCount = 321
         ),
 
@@ -103,7 +113,6 @@ object RecipeRepository {
         Recipe(
             id = 14,
             name = "Bakery2",
-
             ingredients = mutableListOf("ing1", "ing2", "ing3"),
             description = "Desc1",
             rating = 5.0,
@@ -154,11 +163,21 @@ object RecipeRepository {
     val porridge: List<Recipe> = mutableListOf(
         Recipe(
             id = 4,
-            name = "Porridge1",
-            ingredients = mutableListOf("ing1", "ing2", "ing3"),
-            description = "Desc1",
+            name = "Манная овсяная каша",
+            ingredients = mutableListOf("Манная крупа - 4 ст. ложки (100 г)",
+                "Овсяные хлопья - 4 ст. ложки (56 г)",
+                "Молоко - 500 мл",
+                "Вода - 500 мл",
+                "Соль - 1 ч. ложка",
+                "Сахар - 2 ст. ложки (по вкусу)",
+                "Масло сливочное - по вкусу"),
+            description = "В кастрюлю наливаем воду, молоко и ставим на огонь. Насыпаем овсяные хлопья, после закипания варим на среднем огне 2-3 минуты.\n" +
+                    "Затем тонкой струйкой всыпаем манку, постоянно помешивая венчиком. Добавляем в кашу соль, сахар, перемешиваем.\n" +
+                    "Варим кашу на медленном огне 5-7 минут. Как только каша начинает густеть, выключить огонь, закрыть крышкой, дать каше настояться.\n" +
+                    "В готовую кашу добавить кусочек сливочного масла, каша будет еще вкуснее! Отличным дополнением станут свежие ягоды, фрукты.\n" +
+                    "Манно-овсяная каша готова.",
             rating = 5.0,
-            url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mABxooSjjVDxe2OyURHC4Ns-CnJzKM0jqA&s",
+            url = "https://img1.russianfood.com/dycontent/images_upl/567/sm_566912.jpg",
             caloriesCount = 321
         ),
 

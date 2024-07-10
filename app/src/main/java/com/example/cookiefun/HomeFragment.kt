@@ -148,7 +148,8 @@ class HomeFragment : Fragment() {
         private val itemClickListener: OnItemClickListener
     ) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(android.R.layout.simple_list_item_1, parent, false)
+            val view = LayoutInflater.from(parent.context)
+                .inflate(android.R.layout.simple_list_item_1, parent, false)
             return ViewHolder(view)
         }
 
