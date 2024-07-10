@@ -66,10 +66,11 @@ class DbHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
             null
         }
     }
-    // метод для удаления пользователя по логину
+    // метод для удаления пользователя
     fun deleteAllUsers() {
         val db = this.writableDatabase
         db.delete(TABLE_USERS, null, null)
+        db.delete(TABLE_FAVORITES, null, null)
         db.close()
         Log.d("DbHelper", "All users deleted")
     }
