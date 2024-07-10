@@ -83,7 +83,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private fun deleteAccount() {
         dbHelper.deleteAllUsers()
-
         // Сбрасываем статус аутентификации
         val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
         with(sharedPreferences.edit()) {
