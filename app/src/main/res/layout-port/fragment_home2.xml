@@ -47,7 +47,11 @@
         android:id="@+id/recipeOfDayHeadTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+
+        android:layout_below="@id/recipeOfDayImageView"
+        android:padding="1dp"
+        android:layout_marginStart="13dp"
+
         android:text="Предлагаем попробовать:"
         android:textColor="@color/text_white"
         android:textSize="20sp" />
@@ -64,6 +68,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:elevation="4dp">
 
@@ -89,5 +94,6 @@
             android:textColor="@color/text_white"
             android:textSize="20sp" />
     </LinearLayout>
+
 
 </LinearLayout>
