@@ -1,8 +1,11 @@
 package com.example.cookiefun.rvrecipes
 
 import android.util.Printer
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
+import com.example.cookiefun.R
 import com.example.cookiefun.databinding.ItemRecipeBinding
 
 class RecipeHolder(
