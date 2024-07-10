@@ -63,6 +63,9 @@
         <action
             android:id="@+id/action_favouritesFragment_to_categoriesFragment"
             app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_detailRecipeFragment2"
+            app:destination="@id/detailRecipeFragment2" />
     </fragment>
 
     <fragment
