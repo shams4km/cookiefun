@@ -7,17 +7,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cookiefun.DbHelper
 import com.example.cookiefun.R
 import com.example.cookiefun.rvrecipes.RecipeRepository
+import com.example.cookiefun.rvrecipes.RecipesFragmentDirections
 
 class FavouritesFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecipeAdapter
+    private lateinit var adapter: FavouritesAdapter
     private lateinit var dbHelper: DbHelper
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -26,7 +29,24 @@ class FavouritesFragment : Fragment() {
 
         // Инициализация RecyclerView и Adapter
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        adapter = RecipeAdapter(emptyList())
+        adapter = FavouritesAdapter(emptyList(), { recipe ->
+            // Здесь мы вызываем фрагмент с деталями рецепта
+            val action = FavouritesFragmentDirections
+                .actionFavouritesFragmentToDetailRecipeFragment2(recipe)
+            findNavController().navigate(action)
+        }, { recipe, isFavorite ->
+            // Обработка добавления/удаления из избранного
+            val userId = getCurrentUserId()
+            if (userId != null) {
+                dbHelper.removeFavorite(userId, recipe.id)
+                loadFavoriteRecipes(userId)
+                Toast.makeText(
+                    requireContext(),
+                    "${recipe.name} удален из избранного",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
         recyclerView.adapter = adapter
 
         dbHelper = DbHelper(requireContext(), null)
